@@ -1,5 +1,5 @@
 import 'package:adminease/core/app_colors.dart';
-import 'package:adminease/screens/admin/add_user.dart';
+import 'package:adminease/screens/admin/user/user_page.dart';
 import 'package:flutter/material.dart';
 
 class AdminHomePage extends StatefulWidget {
@@ -73,7 +73,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
                       'Quotation',
                       screenWidth,
                       context,
-                      const AddUser(),
+                      const UserPage(),
                       false,
                     ),
                   ],
@@ -94,7 +94,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
     Widget targetPage,
     bool isSalesOrder,
   ) {
-    return InkWell(
+    return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
