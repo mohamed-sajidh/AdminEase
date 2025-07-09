@@ -1,7 +1,9 @@
 import 'package:adminease/core/app_colors.dart';
+import 'package:adminease/providers/admin_provider.dart';
 import 'package:adminease/widgets/colored_cutom_button.dart';
 import 'package:adminease/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class AddUser extends StatefulWidget {
   const AddUser({super.key});
@@ -163,11 +165,23 @@ class _AddUserState extends State<AddUser> {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(12),
-        child: ColoredCustomButton(
-          text: "Save",
-          onPressed: () {},
-          loading: false,
-          formKey: formKey,
+        child: Consumer<AdminProvider>(
+          builder: (context, provider, child) {
+            return ColoredCustomButton(
+              text: "Save",
+              onPressed: () {
+                provider.createUser(
+                  userIdTextController.text,
+                  nameTextController.text,
+                  emailIdTextController.text,
+                  passwordTextController.text,
+                  context,
+                );
+              },
+              loading: provider.addUserLoader,
+              formKey: formKey,
+            );
+          },
         ),
       ),
     );
