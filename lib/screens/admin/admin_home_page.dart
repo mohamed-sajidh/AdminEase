@@ -1,5 +1,6 @@
 import 'package:adminease/core/app_colors.dart';
 import 'package:adminease/screens/admin/user/user_page.dart';
+import 'package:adminease/widgets/logout_popup.dart';
 import 'package:flutter/material.dart';
 
 class AdminHomePage extends StatefulWidget {
@@ -38,7 +39,15 @@ class _AdminHomePageState extends State<AdminHomePage> {
                 ),
               ),
             ),
-            const Icon(Icons.person_add_alt, color: AppColors.red)
+            InkWell(
+              onTap: () {
+                showLogoutDialog(context);
+              },
+              child: const Icon(
+                Icons.person_add_alt,
+                color: AppColors.red,
+              ),
+            )
           ],
         ),
       ),

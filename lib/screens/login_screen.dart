@@ -16,7 +16,6 @@ class _LoginScreenState extends State<LoginScreen> {
   late TextEditingController passwordController;
   final formKey = GlobalKey<FormState>();
 
-  final Color primaryColor = const Color(0xFF6C63FF);
 
   @override
   void initState() {
@@ -46,17 +45,17 @@ class _LoginScreenState extends State<LoginScreen> {
               const Icon(
                 Icons.lock_outline,
                 size: 80,
-                color: Color(0xFF6C63FF),
+                color: AppColors.primaryColor,
               ),
 
               const SizedBox(height: 20),
 
-              Text(
+              const Text(
                 "Welcome Back 👋",
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: primaryColor,
+                  color: AppColors.primaryColor,
                 ),
               ),
 
@@ -93,10 +92,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         onPressed: () {
                           // Forgot password logic
                         },
-                        child: Text(
+                        child: const Text(
                           "Forgot Password?",
                           style: TextStyle(
-                            color: primaryColor,
+                            color: AppColors.primaryColor,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -119,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               }
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: primaryColor,
+                              backgroundColor: AppColors.primaryColor,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
                               ),
@@ -155,10 +154,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     onTap: () {
                       // Navigate to register screen
                     },
-                    child: Text(
+                    child: const Text(
                       "Sign up",
                       style: TextStyle(
-                        color: primaryColor,
+                        color: AppColors.primaryColor,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -197,7 +196,7 @@ class _LoginScreenState extends State<LoginScreen> {
         decoration: InputDecoration(
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-          prefixIcon: Icon(icon, color: primaryColor),
+          prefixIcon: Icon(icon, color: AppColors.primaryColor),
           suffixIcon: isPassword
               ? IconButton(
                   icon: Icon(

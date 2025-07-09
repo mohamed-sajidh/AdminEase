@@ -108,7 +108,7 @@ class _AddUserState extends State<AddUser> {
                                 isRequired: true,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return 'Required';
+                                    return 'Required User Id';
                                   }
                                   return null;
                                 },
@@ -120,7 +120,7 @@ class _AddUserState extends State<AddUser> {
                                 isRequired: true,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return 'Required';
+                                    return 'Required Name';
                                   }
                                   return null;
                                 },
@@ -132,7 +132,7 @@ class _AddUserState extends State<AddUser> {
                                 isRequired: true,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return 'Required';
+                                    return 'Required Email Id';
                                   }
                                   return null;
                                 },
@@ -144,7 +144,7 @@ class _AddUserState extends State<AddUser> {
                                 isRequired: true,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return 'Required';
+                                    return 'Required Password';
                                   }
                                   return null;
                                 },
